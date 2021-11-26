@@ -25,7 +25,7 @@ const calculateDigit = (cpf, is_first_digit = true) => {
   return { digit, cpf_plus_digit : cpf }
 }
 
-const isValid = function (cpf) {
+const isValidCpf = function (cpf) {
   if(!cpf) return false
   const cpf_numbers = onlyNumbers(String(cpf))
   if(!isValidInput(cpf_numbers)) return false
@@ -36,4 +36,4 @@ const isValid = function (cpf) {
   return cpf_numbers === validated_cpf;
 }
 
-module.exports = { isValid }
+module.exports = { isValidCpf }
