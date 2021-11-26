@@ -1,7 +1,11 @@
 const { isValidCpf } = require('./is_cpf_valid')
 
-test("verifica se o cpf é núlo ou undefined.", function() {
+test("verifica se o cpf é núlo.", function() {
   expect(isValidCpf(null)).toBe(false)
+})
+
+test("verifica se o cpf é undefined.", function() {
+  expect(isValidCpf(undefined)).toBe(false)
 })
 
 test("verifica se o cpf é tem 11 digitos.", function () {
