@@ -10,8 +10,8 @@ const calculateDiscount = function(order) {
 const createOrder = function (order) {
   if(!isValidCpf(order.cpf)) return false
   const total_order = calculateDiscount(order)
-  order.total_order = total_order
-  return order
+  const new_order = { ...order, total_order }
+  return new_order
 }
 
 module.exports = { createOrder }
